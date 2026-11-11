@@ -86,34 +86,34 @@ button{font:inherit;cursor:pointer;border:0}
 #viewer.on{display:flex}
 .box{position:relative;width:min(100%,calc((100vh - 110px)*16/9));width:min(100%,calc((100dvh - 110px)*16/9));aspect-ratio:16/9}
 .stage{container-type:size;position:absolute;inset:0;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--tx);font-family:var(--fb);box-shadow:0 0 70px #2af08e20;border:1px solid #14633b}
-.slide{position:absolute;inset:0;background:linear-gradient(var(--ang,135deg),var(--bg1),var(--bg2));animation:var(--anim,fd) .55s ease;display:flex;flex-direction:column;justify-content:safe center;padding:6cqw 7cqw 7.5cqw;gap:2.2cqw;overflow:hidden}
+.slide{position:absolute;inset:0;animation:fd .55s ease;display:flex;flex-direction:column;justify-content:center;padding:6cqw 7cqw 7.5cqw;gap:2.2cqw;overflow:hidden}
 @keyframes fd{from{opacity:0;transform:scale(1.025)}to{opacity:1}}
 .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
-.ov{position:absolute;inset:0;z-index:0;opacity:var(--ovo,1);background:linear-gradient(100deg,color-mix(in srgb,var(--bg1) 95%,transparent) 0%,color-mix(in srgb,var(--bg1) 78%,transparent) 55%,color-mix(in srgb,var(--bg1) 45%,transparent) 100%)}
+.ov{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,color-mix(in srgb,var(--bg1) 95%,transparent) 0%,color-mix(in srgb,var(--bg1) 78%,transparent) 55%,color-mix(in srgb,var(--bg1) 45%,transparent) 100%)}
 .ov.flat{display:none}
 .glow{position:absolute;z-index:0;width:55cqw;height:55cqw;right:-14cqw;top:-22cqw;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--ac) 32%,transparent),transparent 68%);pointer-events:none}
 .slide>*:not(.bgimg):not(.ov):not(.glow):not(.ft):not(.prog){position:relative;z-index:2}
 .ft{position:absolute;z-index:3;left:7cqw;right:7cqw;bottom:2.6cqw;display:flex;justify-content:space-between;font-size:1.45cqw;opacity:.6;letter-spacing:.05cqw}
 .prog{position:absolute;z-index:3;left:0;right:0;bottom:0;height:.6cqw;background:color-mix(in srgb,var(--tx) 12%,transparent)}
 .prog i{display:block;height:100%;background:var(--ac);box-shadow:0 0 1.5cqw var(--ac);transition:width .4s}
-.slide h1{font-family:var(--fh);font-size:calc(6cqw*var(--k,1));line-height:1.06;letter-spacing:-.1cqw;max-width:82%}
-.slide h2{font-family:var(--fh);font-size:calc(3.9cqw*var(--k,1));line-height:1.1}
+.slide h1{font-family:var(--fh);font-size:6cqw;line-height:1.06;letter-spacing:-.1cqw;max-width:82%}
+.slide h2{font-family:var(--fh);font-size:3.9cqw;line-height:1.1}
 .slide h2:after{content:"";display:block;width:7cqw;height:.55cqw;border-radius:1cqw;background:var(--ac);margin-top:1.4cqw;box-shadow:0 0 1.4cqw var(--ac)}
 .slide h1 span,.slide h2 span{background:linear-gradient(90deg,var(--ac),var(--tx));-webkit-background-clip:text;background-clip:text;color:transparent}
 .slide .sub{font-size:2.3cqw;opacity:.88;max-width:68%;line-height:1.35}
 .chip{align-self:flex-start;font-size:1.5cqw;font-weight:700;letter-spacing:.3cqw;padding:.7cqw 1.8cqw;border-radius:5cqw;color:var(--ac);border:.2cqw solid var(--ac);background:color-mix(in srgb,var(--ac) 12%,transparent)}
-.panel{background:color-mix(in srgb,var(--bg1) 58%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 45%,transparent);border-radius:2.4cqw;padding:2.6cqw 3.2cqw;max-width:90%;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:2cqw}
+.panel{background:color-mix(in srgb,var(--bg1) 58%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 45%,transparent);border-radius:2.4cqw;padding:3.2cqw 3.6cqw;max-width:76%;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:2cqw}
 .slide ul{list-style:none;display:flex;flex-direction:column;gap:1.4cqw}
-.slide li{font-size:calc(2.05cqw*var(--k,1));line-height:1.35;padding-left:2.8cqw;position:relative}
+.slide li{font-size:2.2cqw;line-height:1.35;padding-left:2.8cqw;position:relative}
 .slide li:before{content:"";position:absolute;left:0;top:.55em;width:1.1cqw;height:1.1cqw;border-radius:50%;background:var(--ac);box-shadow:0 0 1.2cqw var(--ac)}
-.split{flex-direction:row;align-items:safe center;gap:4.5cqw}
+.split{flex-direction:row;align-items:center;gap:4.5cqw}
 .split .tx{flex:1.15;display:flex;flex-direction:column;gap:2cqw}
 .split .im{flex:1;height:76%;border-radius:2.4cqw;background-size:cover;background-position:center;border:.3cqw solid var(--ac);box-shadow:0 0 3.5cqw color-mix(in srgb,var(--ac) 40%,transparent),1.6cqw 1.6cqw 0 color-mix(in srgb,var(--ac) 18%,transparent)}
 .cards{display:grid;gap:2cqw;margin-top:.6cqw}
-.cd{background:color-mix(in srgb,var(--bg1) 72%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 60%,transparent);border-radius:2cqw;padding:2cqw 2.2cqw;font-size:calc(1.9cqw*var(--k,1));line-height:1.38;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.cd{background:color-mix(in srgb,var(--bg1) 72%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 60%,transparent);border-radius:2cqw;padding:2cqw 2.2cqw;font-size:1.95cqw;line-height:1.38;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .cd b{display:block;color:var(--ac);font-family:var(--fh);font-size:2.4cqw;margin-bottom:.8cqw}
 .keys{display:grid;grid-template-columns:1fr 1fr;gap:1.8cqw 2.4cqw}
-.kp{display:flex;gap:1.6cqw;align-items:flex-start;background:color-mix(in srgb,var(--bg1) 66%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 45%,transparent);border-radius:2cqw;padding:1.8cqw 2cqw;font-size:calc(2cqw*var(--k,1));line-height:1.35;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.kp{display:flex;gap:1.6cqw;align-items:flex-start;background:color-mix(in srgb,var(--bg1) 66%,transparent);border:.2cqw solid color-mix(in srgb,var(--ac) 45%,transparent);border-radius:2cqw;padding:1.8cqw 2cqw;font-size:2cqw;line-height:1.35;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .kp em{flex:none;width:3.8cqw;height:3.8cqw;border-radius:1.2cqw;background:var(--ac);color:var(--bg1);font-style:normal;font-weight:800;font-size:2.1cqw;display:grid;place-items:center;font-family:var(--fh)}
 .bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:center}
 .bar button{background:#07140d;color:#e8fff3;border:1px solid #14633b;padding:10px 16px;border-radius:12px;font-size:14px;transition:.2s}
@@ -136,22 +136,6 @@ button{font:inherit;cursor:pointer;border:0}
 #modal.on{display:grid}
 #modal .card{width:min(520px,100%)}
 #modal input{width:100%;padding:12px;margin:12px 0;background:#020604;border:1px solid #14633b;color:var(--g1);border-radius:10px;font:inherit;font-size:13px}
-
-.para{font-size:calc(2cqw*var(--k,1));line-height:1.5;opacity:.93}
-.src{font-size:1.3cqw;opacity:.6}
-.nofoot .ft,.nofoot .prog{display:none}
-@keyframes sl{from{opacity:0;transform:translateX(5cqw)}}
-@keyframes zm{from{opacity:0;transform:scale(.93)}}
-.set{margin:4px 0 20px;border:1px solid #14633b66;border-radius:16px;padding:12px 14px;background:#05120b}
-.set summary{cursor:pointer;font-weight:600;color:var(--g1);font-size:14px}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
-.set label,#cfgm label{display:block}
-.ck{display:flex!important;gap:8px;align-items:center;font-size:13px;margin:8px 0;opacity:.85}
-select{width:100%;background:#020604;color:#e8fff3;border:1px solid #14633b;border-radius:10px;padding:10px;font:inherit;font-size:14px}
-#cfgm{position:fixed;inset:0;background:#000c;display:none;place-items:center;z-index:200;padding:20px}
-#cfgm.on{display:grid}
-#cfgm .card{width:min(540px,100%);max-height:90dvh;overflow:auto}
-@media(max-width:600px){.g2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -169,16 +153,6 @@ select{width:100%;background:#020604;color:#e8fff3;border:1px solid #14633b;bord
 <div class="model"><span class="dot"></span><div><b>S.A.R-BRAIN 5></b><small>S.A.R Evolution Games · raciocínio avançado</small></div></div>
 <div class="stp"><button id="mn" aria-label="Menos slides">−</button><div><b id="num">7</b><small>slides</small></div><button id="pl" aria-label="Mais slides">+</button></div>
 </div>
-<details class="set" open><summary>⚙ Configurações da apresentação</summary>
-<span class="lab" style="margin-top:12px">Quantidade de slides (3 a 30)</span><div class="chips" id="np"></div>
-<div class="g2">
-<label><span class="lab">Quantidade de texto</span><select id="dens"><option value="r">Resumido</option><option value="m">Médio</option><option value="c" selected>Completo</option></select></label>
-<label><span class="lab">Tom do texto</span><select id="tone"><option value="d">Didático</option><option value="p">Profissional</option><option value="a">Acadêmico</option><option value="s">Simples</option></select></label>
-<label><span class="lab">Paleta de cores</span><select id="pal"><option value="">Automática (pelo tema)</option><option value="verde">Verde</option><option value="azul">Azul</option><option value="roxo">Roxo</option><option value="laranja">Laranja</option><option value="vermelho">Vermelho</option><option value="dourado">Dourado</option></select></label>
-</div>
-<label class="ck"><input type="checkbox" id="strict" checked> Só fatos da Wikipedia (não inventar)</label>
-<label class="ck"><input type="checkbox" id="img" checked> Incluir imagens do tema</label>
-</details>
 <button class="btn" id="go">
 <span class="lbl">✦ Gerar apresentação</span>
 <div class="ldr-ai-generating-badge badge" role="status"><svg class="ldr-ai-generating-badge-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></svg>Gerando</div>
@@ -200,7 +174,7 @@ select{width:100%;background:#020604;color:#e8fff3;border:1px solid #14633b;bord
 <button id="xf" aria-label="Sair da tela cheia">✕</button>
 <div class="bar">
 <button id="bp">◀</button><span id="cnt"></span><button id="bn">▶</button>
-<button id="fs">⛶ Tela cheia</button><button id="cf">⚙ Ajustes</button>
+<button id="fs">⛶ Tela cheia</button>
 <button id="sh" class="pri">🔗 Compartilhar</button>
 <button id="dl" class="pri">⬇ PowerPoint</button>
 <button id="nw">+ Novo</button>
@@ -208,21 +182,9 @@ select{width:100%;background:#020604;color:#e8fff3;border:1px solid #14633b;bord
 </div>
 
 <div id="modal"><div class="card"><h3 class="grad">Link de compartilhamento</h3>
-<input id="lnk" readonly><p id="lnote" style="font-size:12px;opacity:.7;margin-bottom:10px"></p>
-<div class="bar"><button class="pri" id="cp">Copiar link</button><button id="ws">Enviar…</button><button id="hl">⬇ Arquivo HTML</button><button id="cl">Fechar</button></div></div></div>
+<input id="lnk" readonly>
+<div class="bar"><button class="pri" id="cp">Copiar link</button><button id="cl">Fechar</button></div></div></div>
 
-<div id="cfgm"><div class="card"><h3 class="grad">Ajustes do slide</h3>
-<div class="g2">
-<label><span class="lab">Fonte dos títulos</span><select id="cf-fh"></select></label>
-<label><span class="lab">Fonte do texto</span><select id="cf-fb"></select></label>
-<label><span class="lab">Cor de destaque</span><input type="color" id="cf-ac" style="width:100%;height:42px;background:none;border:0"></label>
-<label><span class="lab">Transição</span><select id="cf-an"><option value="fd">Fade</option><option value="sl">Deslizar</option><option value="zm">Zoom</option></select></label>
-<label><span class="lab">Escurecer imagem (<b id="ovv"></b>%)</span><input type="range" id="cf-ov" min="0" max="100" style="width:100%"></label>
-<label><span class="lab">Avanço automático</span><select id="cf-au"><option value="0">Desligado</option><option value="5">5 s</option><option value="10">10 s</option><option value="20">20 s</option></select></label>
-</div>
-<label class="ck"><input type="checkbox" id="cf-pa"> Cada slide usa as cores do seu assunto</label>
-<label class="ck"><input type="checkbox" id="cf-ft"> Mostrar rodapé e progresso</label>
-<div class="bar"><button class="pri" id="cf-x">Concluir</button></div></div></div>
 <script>
 const rot=s=>s.replace(/[a-z]/gi,c=>{const b=c<='Z'?65:97;return String.fromCharCode((c.charCodeAt(0)-b+13)%26+b)});
 const KEY=rot('tfx_BXYEdF7ivMdDKqJqrDNRJTqlo3SLHPRfU49veO20adTs1lWAkpu4');
@@ -237,23 +199,37 @@ $('logo').innerHTML=ICON();
   const l=document.createElement('link');l.rel='icon';l.type='image/svg+xml';l.href='data:image/svg+xml,'+encodeURIComponent(svg);document.head.appendChild(l)})();
 
 /* ===== PROMPT DA IA ===== */
-const DENS={r:['2 a 3 tópicos de até 14 palavras','de 20 a 30 palavras'],m:['3 a 4 tópicos de até 22 palavras','de 40 a 60 palavras'],c:['4 a 5 tópicos de até 30 palavras','de 70 a 100 palavras']};
-const TK={r:380,m:650,c:950};
-const TONES={d:'didático e claro',p:'profissional e objetivo',a:'acadêmico e preciso',s:'simples, para iniciantes'};
-const SYS=(n,o)=>`Você é o motor de apresentações do Slider. Transforme o TEMA em uma apresentação profissional devolvida EXCLUSIVAMENTE em JSON válido (sem markdown nem texto fora do JSON).
+const SYS=n=>`Você é o motor de criação de apresentações da plataforma Slider. Sua única função é transformar um TEMA do usuário em uma apresentação profissional, bonita e coerente, devolvida EXCLUSIVAMENTE em JSON válido (sem markdown, sem comentários, sem texto fora do JSON).
 
 REGRAS DE CONTEÚDO
-1. Gere EXATAMENTE ${n} slides.
-2. NÃO INVENTE INFORMAÇÃO. ${o.strict?'Use SOMENTE fatos presentes no CONTEXTO DA WIKIPEDIA. Se o contexto não cobrir um ponto, omita-o; nunca complete lacunas com suposições.':'Use o CONTEXTO DA WIKIPEDIA como fonte principal e complemente só com conhecimento geral muito seguro.'} Nunca crie números, datas, nomes, citações ou estatísticas que não estejam no contexto.
-3. Mantenha o tema exato do usuário nos títulos e textos. Idioma: o mesmo do tema. Tom: ${TONES[o.tone]}.
-4. Estrutura: slide 1 capa ("cover"); meio: introdução, contexto/história, conceitos, exemplos, impactos, desafios/futuro (distribua pela quantidade); último "end" com 3 a 4 pontos-chave.
-5. Títulos até 8 palavras. Slides de conteúdo: "text" = parágrafo explicativo ${DENS[o.dens][1]} e "bullets" = ${DENS[o.dens][0]}, explicando (o quê, por quê, como). Não repita o parágrafo nos tópicos.
-6. No layout "cards", cada tópico no formato "Título curto: explicação".
-7. "notes": fala do apresentador (2 a 3 frases).
-LAYOUTS: "cover" (só o 1º), "bg", "split", "cards", "end" (só o último). Alterne; não repita o mesmo mais de 2 vezes seguidas.
-IMAGENS: "topicEN" = tema em inglês (1 a 3 palavras). Em cada slide "imageQueries": 3 buscas EM INGLÊS para o Wikimedia Commons (2 a 4 palavras, da mais específica à mais geral) descrevendo uma cena fotografável do conteúdo do slide e SEMPRE contendo o nome do assunto principal (ex: "Curiosity rover Mars","Mars surface landscape","Mars planet"). Evite termos abstratos, mapas, logos, gráficos e pessoas vivas.
-DESIGN: ${o.pal?`Paleta-base em tons de ${o.pal}. `:''}"theme" com bg1/bg2 (escuros e próximos), accent (vibrante) e text (claro), em #RRGGBB, alto contraste, coerentes com o assunto. "fontHeading" e "fontBody" SOMENTE de: ${FONTS.join(', ')}. Cada slide tem "colors":{"bg1","bg2","accent"}: variação do tema inspirada no assunto DAQUELE slide (ex: oceano puxa para azul, fogo para laranja), escura e legível sobre texto claro.
-SAÍDA: {"title":"","topicEN":"","theme":{"bg1":"","bg2":"","accent":"","text":"","fontHeading":"","fontBody":""},"slides":[{"layout":"cover","title":"","subtitle":"","text":"","bullets":[],"imageQueries":["","",""],"colors":{"bg1":"","bg2":"","accent":""},"notes":""}]}
+1. Gere EXATAMENTE ${n} slides, nem mais nem menos.
+2. Use ao máximo o tema exato digitado pelo usuário: as palavras-chave do tema devem aparecer no título principal, nos títulos dos slides e nos textos. Não fuja do assunto.
+3. Use o CONTEXTO DA WIKIPEDIA fornecido como fonte principal de fatos (datas, nomes, números, definições). Reescreva com suas palavras, de forma clara. Nunca invente números, datas ou citações. Se o contexto for insuficiente, use apenas conhecimento geral seguro.
+4. Responda no mesmo idioma do tema do usuário.
+5. Estrutura: slide 1 capa (layout "cover"); slides do meio explicando introdução, contexto/história, conceitos principais, dados curiosos, impactos/aplicações, futuro/desafios (distribua conforme a quantidade); último slide conclusão (layout "end") com 3 a 4 pontos-chave.
+6. Títulos curtos (até 8 palavras). Cada slide de conteúdo tem de 3 a 4 tópicos, cada um com no máximo 16 palavras, objetivos e informativos. Nada de parágrafos longos.
+7. Para o layout "cards", cada tópico deve ter o formato "Título curto: explicação curta".
+8. Escreva em "notes" uma fala curta (1 a 2 frases) para o apresentador.
+
+LAYOUTS PERMITIDOS (alterne para criar ritmo visual, não repita o mesmo layout mais de 2 vezes seguidas)
+- "cover": capa (title, subtitle). Só no primeiro slide.
+- "bg": imagem de fundo escurecida com título e tópicos.
+- "split": texto à esquerda e imagem destacada à direita.
+- "cards": tópicos em cartões lado a lado.
+- "end": encerramento com pontos-chave. Só no último slide.
+
+IMAGENS (MUITO IMPORTANTE: a imagem de cada slide precisa ilustrar exatamente o que o slide fala e o tema geral)
+- "topicEN": o tema principal da apresentação em inglês, 1 a 3 palavras (ex: "Mars exploration").
+- Para cada slide forneça "imageQueries": lista de 3 buscas EM INGLÊS para o Wikimedia Commons, de 2 a 4 palavras, da mais específica para a mais geral. Cada busca descreve uma cena física e fotografável que representa o conteúdo daquele slide E se relaciona com o tema geral. Inclua o nome do assunto principal (lugar, objeto, evento, espécie, tecnologia) nas duas primeiras. Exemplos para o tema "exploração de Marte": ["Curiosity rover Mars","Mars surface landscape","Mars planet"].
+- Evite termos abstratos (ex: "innovation", "future", "success"), mapas, logotipos, gráficos, diagramas e pessoas vivas. Prefira lugares, objetos, paisagens, construções, animais, equipamentos.
+
+DESIGN (OBRIGATÓRIO)
+- Defina "theme" com cores harmônicas e de alto contraste, coerentes com o assunto: bg1 (fundo escuro principal), bg2 (fundo escuro secundário, tom próximo ao bg1), accent (cor de destaque vibrante) e text (cor do texto, clara). Todas em hexadecimal #RRGGBB. O texto deve ser sempre legível sobre o fundo.
+- Escolha "fontHeading" e "fontBody" SOMENTE desta lista: ${FONTS.join(', ')}. Combine de forma elegante (ex: Playfair Display + Inter para história/cultura; Orbitron + Space Grotesk para tecnologia/espaço; Montserrat + Poppins para negócios; Oswald + DM Sans para esportes/energia; Lora + Raleway para natureza/saúde).
+
+FORMATO DE SAÍDA (JSON estrito)
+{"title":"string","topicEN":"string","theme":{"bg1":"#000000","bg2":"#000000","accent":"#00ff88","text":"#ffffff","fontHeading":"Poppins","fontBody":"Inter"},"slides":[{"layout":"cover","title":"string","subtitle":"string","bullets":[],"imageQueries":["string","string","string"],"notes":"string"},{"layout":"split","title":"string","subtitle":"","bullets":["string","string","string"],"imageQueries":["string","string","string"],"notes":"string"}]}
+
 Retorne apenas o JSON.`;
 
 let deck=null,cur=0,N=7;
@@ -262,68 +238,60 @@ const hex=(v,d)=>/^#[0-9a-f]{6}$/i.test(v||'')?v:d;
 const st=(t,sub,isErr)=>{$('st').className=isErr?'err':'';$('st').innerHTML=t?esc(t)+(sub?`<small>${esc(sub)}</small>`:''):''};
 
 /* ===== UI inicial ===== */
-const CFG0={anim:'fd',ovo:100,foot:1,auto:0,per:1};
-let OPT={},TOPIC='',SRC=[],AUTO;
-const setN=v=>{N=Math.max(3,Math.min(30,v));$('num').textContent=N};
+const setN=v=>{N=Math.max(5,Math.min(15,v));$('num').textContent=N};
 $('mn').onclick=()=>setN(N-1);$('pl').onclick=()=>setN(N+1);
-[3,5,8,10,12,15,20,25,30].forEach(v=>{const b=document.createElement('button');b.textContent=v;b.onclick=()=>setN(v);$('np').appendChild(b)});
 ['A história da exploração espacial','Inteligência artificial na saúde','Revolução Industrial','Energia solar e o futuro do planeta','Antigo Egito'].forEach(t=>{
   const b=document.createElement('button');b.textContent=t;b.onclick=()=>{$('prompt').value=t};$('chips').appendChild(b)});
-const readOpt=()=>{OPT={dens:$('dens').value,tone:$('tone').value,pal:$('pal').value,strict:$('strict').checked,img:$('img').checked}};
 function setBusy(b){$('go').disabled=b;$('go').classList.toggle('busy',b);$('gen').classList.toggle('on',b)}
 
 /* ===== BUSCAS ===== */
-const WP=(l,q)=>`https://${l}.wikipedia.org/w/api.php?${q}&format=json&origin=*`;
 async function wiki(q){
-  SRC=[];
   for(const l of ['pt','en']){
     try{
-      const j=await (await fetch(WP(l,`action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=4&prop=extracts&exintro=1&explaintext=1&exlimit=max&exchars=1100`))).json();
+      const u=`https://${l}.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=4&prop=extracts&exintro=1&explaintext=1&exlimit=max&exchars=1000&format=json&origin=*`;
+      const j=await (await fetch(u)).json();
       const p=Object.values(j.query?.pages||{}).sort((a,b)=>a.index-b.index);
-      if(!p.length)continue;
-      let full='';
-      try{const f=await (await fetch(WP(l,`action=query&prop=extracts&explaintext=1&exlimit=1&titles=${encodeURIComponent(p[0].title)}`))).json();full=(Object.values(f.query?.pages||{})[0]?.extract||'').slice(0,9000)}catch(e){}
-      SRC=p.slice(0,3).map(x=>x.title+' (Wikipedia '+l+')');
-      return `## ARTIGO PRINCIPAL: ${p[0].title}\n${full}\n\n`+p.slice(1).map(x=>`## ${x.title}\n${x.extract||''}`).join('\n\n');
+      if(p.length)return p.map(x=>`## ${x.title}\n${x.extract||''}`).join('\n\n');
     }catch(e){}
   }
   return '';
 }
 const BAD=/\b(map|maps|logo|flag|coat of arms|diagram|chart|graph|poster|stamp|scan|cover|signature|screenshot|icon|symbol|banner|book|manuscript|page|text|seal|emblem|infographic|table|plan|drawing|sketch|engraving|lithograph|postcard|collage|montage|stub)\b/i;
-const kw=s=>(s||'').toLowerCase().split(/\W+/).filter(w=>w.length>3);
 async function commons(q){
   try{
-    const u=`https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=${encodeURIComponent(q+' filetype:bitmap')}&gsrlimit=25&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiextmetadatafilter=ImageDescription|Categories&iiurlwidth=1280&format=json&origin=*`;
+    const u=`https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=${encodeURIComponent(q+' filetype:bitmap')}&gsrlimit=20&prop=imageinfo&iiprop=url|mime|size&iiurlwidth=1280&format=json&origin=*`;
     const j=await (await fetch(u)).json();
-    const qw=kw(q),tw=kw(TOPIC);
+    const qw=q.toLowerCase().split(/\W+/).filter(w=>w.length>2);
     return Object.values(j.query?.pages||{}).sort((a,b)=>a.index-b.index).map(p=>{
       const i=p.imageinfo?.[0];if(!i||i.mime!=='image/jpeg'||!i.thumburl)return null;
       const title=p.title.replace(/^File:/,'').replace(/\.\w+$/,'');
       const r=i.width/i.height;
       if(i.width<1000||r<1.25||r>2.3||BAD.test(title))return null;
-      const m=i.extmetadata||{};
-      const tl=(title+' '+(m.ImageDescription?.value||'').replace(/<[^>]+>/g,' ')+' '+(m.Categories?.value||'')).toLowerCase();
-      const hit=w=>tl.includes(w.replace(/s$/,''));
-      const sq=qw.filter(hit).length,st_=tw.filter(hit).length;
-      if(tw.length&&!st_&&sq<2)return null;
-      return{url:i.thumburl,score:sq+st_*2,rank:p.index};
+      const tl=title.toLowerCase();
+      const score=qw.filter(w=>tl.includes(w.replace(/s$/,''))).length;
+      return{url:i.thumburl,score,rank:p.index};
     }).filter(Boolean).sort((a,b)=>b.score-a.score||a.rank-b.rank);
   }catch(e){return[]}
 }
 const loads=u=>new Promise(r=>{const i=new Image();const t=setTimeout(()=>r(false),7000);i.onload=()=>{clearTimeout(t);r(true)};i.onerror=()=>{clearTimeout(t);r(false)};i.src=u});
 async function pickImage(queries,used){
-  for(const q of queries){
-    const cand=(await commons(q)).filter(c=>!used.has(c.url)).slice(0,4);
-    for(const c of cand)if(await loads(c.url)){used.add(c.url);return c.url}
+  for(let qi=0;qi<queries.length;qi++){
+    const list=await commons(queries[qi]);
+    const last=qi===queries.length-1;
+    const cand=list.filter(c=>!used.has(c.url)&&(c.score>=1||last)).slice(0,4);
+    for(const c of cand){
+      if(used.has(c.url))continue;
+      if(await loads(c.url)){used.add(c.url);return c.url}
+    }
   }
   return '';
 }
 async function ai(p,w,n){
   const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',
     headers:{'Content-Type':'application/json',Authorization:'Bearer '+KEY},
-    body:JSON.stringify({model:MODEL,temperature:.3,max_tokens:Math.min(30000,3000+n*TK[OPT.dens]),reasoning_effort:'low',response_format:{type:'json_object'},
-      messages:[{role:'system',content:SYS(n,OPT)},{role:'user',content:`TEMA: ${p}\nNÚMERO DE SLIDES: ${n}\n\nCONTEXTO DA WIKIPEDIA:\n${w||'(nada encontrado)'}`}]})});
-  if(r.status===429)throw new Error('Limite de uso da IA atingido. Aguarde um minuto e tente de novo (ou use menos slides).');
+    body:JSON.stringify({model:MODEL,temperature:.6,max_tokens:Math.min(8000,2800+n*450),reasoning_effort:'low',response_format:{type:'json_object'},
+      messages:[{role:'system',content:SYS(n)},{role:'user',content:`TEMA: ${p}\nNÚMERO DE SLIDES: ${n}\n\nCONTEXTO DA WIKIPEDIA:\n${w||'(nada encontrado)'}`}]})});
+  if(r.status===429)throw new Error('Limite de uso da IA atingido. Aguarde um minuto e tente de novo.');
   if(!r.ok)throw new Error('Erro na API ('+r.status+')');
   const t=((await r.json()).choices[0].message.content||'').replace(/```json|```/g,'').trim();
   return JSON.parse(t.slice(t.indexOf('{'),t.lastIndexOf('}')+1));
@@ -332,11 +300,10 @@ async function ai(p,w,n){
 $('go').onclick=async()=>{
   const p=$('prompt').value.trim();
   if(!p){setBusy(false);$('gen').classList.add('on');return st('Digite o tema da apresentação.',0,1)}
-  setBusy(true);readOpt();
+  setBusy(true);
   try{
     st('Buscando fatos na Wikipedia...');
     const w=await wiki(p);
-    if(!w&&OPT.strict)throw new Error('Não encontrei esse tema na Wikipedia. Reescreva o tema ou desative "Só fatos da Wikipedia".');
     let j=null;
     for(let i=0;i<2;i++){
       st(i?'Ajustando os slides...':'A IA está criando seus slides...',`${N} slides sobre "${p.slice(0,50)}"`);
@@ -344,24 +311,22 @@ $('go').onclick=async()=>{
       if(!j||(r.slides||[]).length>(j.slides||[]).length)j=r;
       if((j.slides||[]).length>=N)break;
     }
-    if((j.slides||[]).length<Math.min(3,N))throw new Error('A IA não gerou slides suficientes. Tente novamente.');
+    if((j.slides||[]).length<5)throw new Error('A IA não gerou slides suficientes. Tente novamente.');
     const slides=j.slides.slice(0,N);
-    const topic=(j.topicEN||'').trim();TOPIC=topic;
+    const topic=(j.topicEN||'').trim();
     const used=new Set(),imgs=new Array(slides.length).fill('');
     let done=0,next=0;
-    if(OPT.img){
-      st('Selecionando imagens do tema...',`0 de ${slides.length}`);
-      const worker=async()=>{
-        while(next<slides.length){
-          const k=next++,s=slides[k];
-          let q=(Array.isArray(s.imageQueries)?s.imageQueries:[s.imageQuery]).filter(x=>typeof x==='string'&&x.trim());
-          if(topic)q.push(topic);
-          imgs[k]=await pickImage(q.slice(0,4),used);
-          st('Selecionando imagens do tema...',`${++done} de ${slides.length}`);
-        }
-      };
-      await Promise.all([worker(),worker(),worker()]);
-    }
+    st('Selecionando imagens do tema...',`0 de ${slides.length}`);
+    const worker=async()=>{
+      while(next<slides.length){
+        const k=next++,s=slides[k];
+        let q=(Array.isArray(s.imageQueries)?s.imageQueries:[s.imageQuery]).filter(x=>typeof x==='string'&&x.trim());
+        if(topic)q.push(topic);
+        imgs[k]=await pickImage(q.slice(0,4),used);
+        st('Selecionando imagens do tema...',`${++done} de ${slides.length}`);
+      }
+    };
+    await Promise.all([worker(),worker(),worker()]);
     const t=j.theme||{};
     deck={t:j.title||p,
       th:{b1:hex(t.bg1,'#030a06'),b2:hex(t.bg2,'#06301c'),ac:hex(t.accent,'#2af08e'),tx:hex(t.text,'#ffffff'),
@@ -370,64 +335,35 @@ $('go').onclick=async()=>{
         let l=['bg','split','cards'].includes(s.layout)?s.layout:'bg';
         if(i===0)l='cover';else if(i===slides.length-1)l='end';
         if(l==='split'&&!imgs[i])l='cards';
-        const k=s.colors||{};
-        return{l,t:s.title||'',u:s.subtitle||'',x:s.text||'',b:(s.bullets||[]).map(String).slice(0,6),i:imgs[i],n:s.notes||'',
-          c:k.bg1?{b1:hex(k.bg1,''),b2:hex(k.bg2,''),ac:hex(k.accent,'')}:null}}),
-      src:SRC,cfg:{...CFG0}};
+        return{l,t:s.title||'',u:s.subtitle||'',b:(s.bullets||[]).map(String).slice(0,4),i:imgs[i],n:s.notes||''}})};
     st('');cur=0;setBusy(false);show();return;
   }catch(e){st('Erro: '+e.message,0,1)}
   $('go').disabled=false;$('go').classList.remove('busy');
 };
 
 /* ===== RENDER ===== */
-const sc=(d,s)=>{const g=d.cfg||{},o=g.per===0?null:s.c;return{...d.th,b1:o?.b1||d.th.b1,b2:o?.b2||d.th.b2,ac:g.ac||o?.ac||d.th.ac}};
-const PR=(s,bl)=>[...(s.x?[{text:s.x,options:{breakLine:true,paraSpaceAfter:14}}]:[]),...bl.map(x=>({text:x,options:{bullet:true,breakLine:true,paraSpaceAfter:10}}))];
 function slideHTML(s,i,total){
-  const c=sc(deck,s),sty=`--bg1:${c.b1};--bg2:${c.b2};--ac:${c.ac};--ang:${[135,160,110,200,150][i%5]}deg`;
   const bg=s.i?`<div class="bgimg" style="background-image:url('${esc(s.i)}')"></div>`:'';
-  const ov=`<div class="ov${s.i?'':' flat'}"></div><div class="glow" style="${i%2?'left:-14cqw;right:auto;':''}${i%3==2?'top:auto;bottom:-24cqw':''}"></div>`;
+  const ov=`<div class="ov${s.i?'':' flat'}"></div><div class="glow"></div>`;
   const ft=s.l==='cover'?'':`<div class="ft"><span>${esc(deck.t)}</span><span>${String(i+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}</span></div><div class="prog"><i style="width:${(i+1)/total*100}%"></i></div>`;
   const ul=s.b.length?`<ul>${s.b.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>`:'';
-  const px=s.x?`<p class="para">${esc(s.x)}</p>`:'';
-  const h2=`<h2><span>${esc(s.t)}</span></h2>`;
   const cols=n=>n<=3?n:(n===4?2:3);
-  const o=(cls,inner)=>`<div class="slide ${cls}" style="${sty}">${inner}</div>`;
-  if(s.l==='cover')return o('',`${bg}${ov}<div class="chip">APRESENTAÇÃO</div><h1><span>${esc(s.t)}</span></h1><p class="sub">${esc(s.u)}</p>`);
-  if(s.l==='split')return o('split',`${ov}<div class="tx">${h2}${px}${ul}</div><div class="im" style="background-image:url('${esc(s.i)}')"></div>${ft}`);
-  if(s.l==='cards')return o('',`${bg}${ov}${h2}${px}<div class="cards" style="grid-template-columns:repeat(${cols(s.b.length||1)},1fr)">${s.b.map(b=>{const k=b.indexOf(':');return k>0&&k<40?`<div class="cd"><b>${esc(b.slice(0,k))}</b>${esc(b.slice(k+1).trim())}</div>`:`<div class="cd">${esc(b)}</div>`}).join('')}</div>${ft}`);
-  if(s.l==='end')return o('',`${bg}${ov}${h2}${px}<div class="keys">${s.b.map((b,k)=>`<div class="kp"><em>${k+1}</em><span>${esc(b)}</span></div>`).join('')}</div>${deck.src&&deck.src.length?`<div class="src">Fontes: ${esc(deck.src.join(' · '))}</div>`:''}${ft}`);
-  return o('',`${bg}${ov}<div class="panel">${h2}${px}${ul}</div>${ft}`);
+  if(s.l==='cover')return`<div class="slide">${bg}${ov}<div class="chip">APRESENTAÇÃO</div><h1><span>${esc(s.t)}</span></h1><p class="sub">${esc(s.u)}</p></div>`;
+  if(s.l==='split')return`<div class="slide split">${ov}<div class="tx"><h2><span>${esc(s.t)}</span></h2>${ul}</div><div class="im" style="background-image:url('${esc(s.i)}')"></div>${ft}</div>`;
+  if(s.l==='cards')return`<div class="slide">${bg}${ov}<h2><span>${esc(s.t)}</span></h2><div class="cards" style="grid-template-columns:repeat(${cols(s.b.length||1)},1fr)">${s.b.map(b=>{const k=b.indexOf(':');return k>0&&k<40?`<div class="cd"><b>${esc(b.slice(0,k))}</b>${esc(b.slice(k+1).trim())}</div>`:`<div class="cd">${esc(b)}</div>`}).join('')}</div>${ft}</div>`;
+  if(s.l==='end')return`<div class="slide">${bg}${ov}<h2><span>${esc(s.t)}</span></h2><div class="keys">${s.b.map((b,k)=>`<div class="kp"><em>${k+1}</em><span>${esc(b)}</span></div>`).join('')}</div>${ft}</div>`;
+  return`<div class="slide">${bg}${ov}<div class="panel"><h2><span>${esc(s.t)}</span></h2>${ul}</div>${ft}</div>`;
 }
 function theme(el,t){const x=el.style;x.setProperty('--bg1',t.b1);x.setProperty('--bg2',t.b2);x.setProperty('--ac',t.ac);x.setProperty('--tx',t.tx);x.setProperty('--fh',`'${t.fh}',sans-serif`);x.setProperty('--fb',`'${t.fb}',sans-serif`)}
-function applyCfg(){
-  const c=deck.cfg=Object.assign({},CFG0,deck.cfg),x=$('stage');
-  x.style.setProperty('--anim',c.anim);x.style.setProperty('--ovo',c.ovo/100);x.classList.toggle('nofoot',!c.foot);
-  clearInterval(AUTO);if(+c.auto)AUTO=setInterval(()=>nav(cur<deck.s.length-1?1:-cur),c.auto*1000);
-}
-function show(){$('home').style.display='none';$('viewer').classList.add('on');theme($('stage'),deck.th);applyCfg();draw()}
+function show(){$('home').style.display='none';$('viewer').classList.add('on');theme($('stage'),deck.th);draw()}
 function draw(){
-  const g=$('stage');g.innerHTML=slideHTML(deck.s[cur],cur,deck.s.length);
-  const sl=g.firstElementChild;let k=1;
-  while(sl.scrollHeight>sl.clientHeight+3&&k>.5){k-=.04;sl.style.setProperty('--k',k.toFixed(2))}
+  $('stage').innerHTML=slideHTML(deck.s[cur],cur,deck.s.length);
   $('cnt').textContent=(cur+1)+' / '+deck.s.length;
   document.title=deck.t+' — Slider';
 }
 function nav(d){const n=cur+d;if(n>=0&&n<deck.s.length){cur=n;draw();wake()}}
 $('bp').onclick=$('pv').onclick=()=>nav(-1);
 $('bn').onclick=$('nx').onclick=()=>nav(1);
-
-/* ===== AJUSTES DO SLIDE ===== */
-const CF=$('cfgm');
-['fh','fb'].forEach(k=>FONTS.forEach(f=>$('cf-'+k).add(new Option(f,f))));
-$('cf').onclick=()=>{const c=Object.assign({},CFG0,deck.cfg);
-  $('cf-fh').value=deck.th.fh;$('cf-fb').value=deck.th.fb;$('cf-ac').value=c.ac||deck.th.ac;$('cf-an').value=c.anim;
-  $('cf-ov').value=c.ovo;$('ovv').textContent=c.ovo;$('cf-au').value=c.auto;$('cf-pa').checked=c.per!==0;$('cf-ft').checked=!!c.foot;CF.classList.add('on')};
-CF.oninput=e=>{
-  deck.th.fh=$('cf-fh').value;deck.th.fb=$('cf-fb').value;
-  deck.cfg={...deck.cfg,ac:e.target.id==='cf-ac'?$('cf-ac').value:(deck.cfg||{}).ac,anim:$('cf-an').value,ovo:+$('cf-ov').value,auto:+$('cf-au').value,per:$('cf-pa').checked?1:0,foot:$('cf-ft').checked?1:0};
-  $('ovv').textContent=$('cf-ov').value;theme($('stage'),deck.th);applyCfg();draw();
-};
-$('cf-x').onclick=()=>CF.classList.remove('on');
 
 /* ===== TELA CHEIA ===== */
 const V=$('viewer');
@@ -465,36 +401,20 @@ $('stage').addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-t
 $('nw').onclick=()=>{if(isFS())exitFS();history.replaceState(null,'',location.pathname);V.classList.remove('on');$('home').style.display='block';setBusy(false);st('')};
 
 /* ===== COMPARTILHAR ===== */
-const b64=u=>{let b='';u.forEach(x=>b+=String.fromCharCode(x));return btoa(b).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
-const unb64=t=>Uint8Array.from(atob(t.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
 async function pack(o){
-  const raw=new TextEncoder().encode(JSON.stringify(o));
-  if(window.CompressionStream){try{const s=new Blob([raw]).stream().pipeThrough(new CompressionStream('gzip'));return 'g'+b64(new Uint8Array(await new Response(s).arrayBuffer()))}catch(e){}}
-  return 'r'+b64(raw);
+  const s=new Blob([JSON.stringify(o)]).stream().pipeThrough(new CompressionStream('gzip'));
+  const u=new Uint8Array(await new Response(s).arrayBuffer());let b='';u.forEach(x=>b+=String.fromCharCode(x));
+  return btoa(b).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
 }
 async function unpack(t){
-  const k=t[0],u=unb64('gr'.includes(k)?t.slice(1):t);
-  if(k==='r')return JSON.parse(new TextDecoder().decode(u));
+  const b=atob(t.replace(/-/g,'+').replace(/_/g,'/'));const u=Uint8Array.from(b,c=>c.charCodeAt(0));
   const s=new Blob([u]).stream().pipeThrough(new DecompressionStream('gzip'));
   return JSON.parse(await new Response(s).text());
 }
-$('sh').onclick=async()=>{
-  $('lnk').value=location.href.split('#')[0]+'#d='+await pack(deck)+'&s='+(cur+1);
-  $('lnote').textContent=/^https?:/.test(location.protocol)?'O link leva a apresentação inteira dentro dele e abre direto neste slide, em qualquer aparelho com internet.':'Esta página está aberta como arquivo local: hospede o arquivo (GitHub Pages, Netlify...) para o link funcionar em outros aparelhos, ou use "Arquivo HTML".';
-  $('ws').style.display=navigator.share?'':'none';
-  $('modal').classList.add('on');
-};
+$('sh').onclick=async()=>{$('lnk').value=location.origin+location.pathname+'#d='+await pack(deck);$('modal').classList.add('on')};
 $('cp').onclick=async()=>{
   try{await navigator.clipboard.writeText($('lnk').value)}catch(e){$('lnk').select();document.execCommand('copy')}
   $('cp').textContent='Copiado ✓';setTimeout(()=>$('cp').textContent='Copiar link',1800);
-};
-$('ws').onclick=async()=>{try{await navigator.share({title:deck.t,url:$('lnk').value})}catch(e){}};
-$('hl').onclick=()=>{
-  $('modal').classList.remove('on');
-  let x='<!DOCTYPE html>\n'+document.documentElement.outerHTML.replace(/<script id="deck-data">[\s\S]*?<\/script>/,'');
-  const d=JSON.stringify(deck).replace(/</g,'\\u003c');
-  x=x.replace('<head>',()=>'<head><script id="deck-data">window.__DECK__='+d+'<\/script>');
-  saveBlob(new Blob([x],{type:'text/html'}),((deck.t||'slides').replace(/[^\w\- ]/g,'').trim().slice(0,40)||'slides')+'.html');
 };
 $('cl').onclick=()=>$('modal').classList.remove('on');
 
@@ -524,13 +444,13 @@ $('dl').onclick=async()=>{
   try{
     if(!window.PptxGenJS)await loadScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js');
     if(!window.PptxGenJS)throw new Error('a biblioteca do PowerPoint não carregou. Verifique a internet.');
-    let t=deck.th;const c=h=>h.replace('#','');
+    const t=deck.th,c=h=>h.replace('#','');
     const p=new PptxGenJS();p.layout='LAYOUT_WIDE';p.title=deck.t;
     const W=13.33,H=7.5,none={type:'none'};
     const total=deck.s.length;
     for(let k=0;k<total;k++){
       btn.textContent=`Gerando ${k+1}/${total}...`;
-      const s=deck.s[k],sl=p.addSlide();t=sc(deck,s);sl.background={color:c(t.b1)};
+      const s=deck.s[k],sl=p.addSlide();sl.background={color:c(t.b1)};
       const full=s.l!=='split';
       const img=s.i?await imgData(s.i,full?16:5.2,full?9:5.5):'';
       sl.addShape(p.ShapeType.ellipse,{x:8.6,y:-2.6,w:7.5,h:7.5,fill:{color:c(t.ac),transparency:90},line:none});
@@ -538,8 +458,8 @@ $('dl').onclick=async()=>{
         sl.addImage({data:img,x:0,y:0,w:W,h:H});
         sl.addShape(p.ShapeType.rect,{x:0,y:0,w:W,h:H,fill:{color:c(t.b1),transparency:16},line:none});
       }
-      const bl=s.b||[],chars=(bl.join('')+(s.x||'')).length;
-      const fs=chars>800?13:chars>640?15:chars>500?17:chars>380?18:20;
+      const bl=s.b||[],chars=bl.join('').length;
+      const fs=chars>420?15:chars>340?17:chars>260?19:21;
       if(s.l==='cover'){
         sl.addText('APRESENTAÇÃO',{x:.9,y:1.7,w:3,h:.4,fontSize:12,bold:true,charSpacing:4,color:c(t.ac),fontFace:t.fb});
         sl.addText(s.t,{x:.9,y:2.2,w:10.4,h:2.1,fontSize:s.t.length>45?38:46,bold:true,color:c(t.ac),fontFace:t.fh,valign:'top',fit:'shrink'});
@@ -548,7 +468,7 @@ $('dl').onclick=async()=>{
       }else if(s.l==='split'){
         sl.addText(s.t,{x:.7,y:.6,w:6.5,h:1.2,fontSize:30,bold:true,color:c(t.ac),fontFace:t.fh,valign:'top',fit:'shrink'});
         sl.addShape(p.ShapeType.rect,{x:.7,y:1.85,w:1.5,h:.06,fill:{color:c(t.ac)},line:none});
-        sl.addText(PR(s,bl),{x:.7,y:2.15,w:6.3,h:4.6,fontSize:Math.min(fs,19),color:c(t.tx),fontFace:t.fb,valign:'top',fit:'shrink'});
+        sl.addText(bl.map(x=>({text:x,options:{bullet:true,breakLine:true,paraSpaceAfter:12}})),{x:.7,y:2.15,w:6.3,h:4.6,fontSize:Math.min(fs,19),color:c(t.tx),fontFace:t.fb,valign:'top',fit:'shrink'});
         if(img){
           sl.addShape(p.ShapeType.rect,{x:7.45,y:1.15,w:5.2,h:5.5,fill:{color:c(t.ac),transparency:75},line:none});
           sl.addImage({data:img,x:7.3,y:1.0,w:5.2,h:5.5});
@@ -577,7 +497,7 @@ $('dl').onclick=async()=>{
         sl.addShape(p.ShapeType.roundRect,{x:.7,y:.7,w:10.4,h:6.0,rectRadius:.22,fill:{color:c(t.b1),transparency:img?26:35},line:{color:c(t.ac),width:1.25}});
         sl.addText(s.t,{x:1.1,y:.95,w:9.6,h:1,fontSize:30,bold:true,color:c(t.ac),fontFace:t.fh,valign:'top',fit:'shrink'});
         sl.addShape(p.ShapeType.rect,{x:1.1,y:1.95,w:1.5,h:.06,fill:{color:c(t.ac)},line:none});
-        sl.addText(PR(s,bl),{x:1.1,y:2.25,w:9.6,h:4.2,fontSize:fs,color:c(t.tx),fontFace:t.fb,valign:'top',fit:'shrink'});
+        sl.addText(bl.map(x=>({text:x,options:{bullet:true,breakLine:true,paraSpaceAfter:12}})),{x:1.1,y:2.25,w:9.6,h:4.2,fontSize:fs,color:c(t.tx),fontFace:t.fb,valign:'top',fit:'shrink'});
       }
       if(s.l!=='cover'){
         sl.addText(deck.t,{x:.7,y:7.0,w:8,h:.3,fontSize:10,color:c(t.tx),fontFace:t.fb});
@@ -594,11 +514,8 @@ $('dl').onclick=async()=>{
 };
 
 (async()=>{
-  const m=location.hash.match(/^#d=([^&]+)(?:&s=(\d+))?/);
-  try{
-    if(window.__DECK__)deck=window.__DECK__;else if(m)deck=await unpack(m[1]);
-    if(deck){cur=Math.min(Math.max((+(m&&m[2])||1)-1,0),deck.s.length-1);show()}
-  }catch(e){alert('Não foi possível abrir esta apresentação.')}
+  const m=location.hash.match(/^#d=(.+)/);
+  if(m){try{deck=await unpack(m[1]);cur=0;show()}catch(e){}}
 })();
 </script>
 </body>
